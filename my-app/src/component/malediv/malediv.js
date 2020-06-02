@@ -14,8 +14,8 @@ client.getEntry('61txJ6LyhC4qHyEpWDkQaw')
       document.querySelector('#image').setAttribute("src", asset.items[0].fields.file.url)
       document.querySelector('#title').innerHTML = entry.fields.title
       document.querySelector('#paragraph').innerHTML = entry.fields.paragraph
-      console.log('#image')
-      console.log(entry)
+      console.log(asset)
+      
   }
   )
 })
