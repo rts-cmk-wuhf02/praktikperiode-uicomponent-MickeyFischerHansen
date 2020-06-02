@@ -11,15 +11,21 @@ client.getEntry('61txJ6LyhC4qHyEpWDkQaw')
 .then((entry) => {
   client.getAssets('1y1AJ0riO1ZWSICPvF5LbA')
   .then((asset) => {
-      document.querySelector('#id').setAttribute("src", asset.items[0].fields.file.url)
-      document.querySelector('#id').innerHTML = entry.fields.title
+      document.querySelector('#image').setAttribute("src", asset.items[0].fields.file.url)
+      document.querySelector('#title').innerHTML = entry.fields.title
+      document.querySelector('#paragraph').innerHTML = entry.fields.paragraph
+      console.log('#image')
+      console.log(entry)
   }
   )
 })
 .catch(console.error)
 const virker= () => (
   <div id="virk">
-       <h1 id="id">HTML her</h1>
+      <img id="image"></img>
+       <h1 id="title">HTML her</h1>
+       <p id="paragraph"></p>
+       
         </div>
 )
 export default virker;
